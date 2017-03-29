@@ -26,8 +26,8 @@ setup(
     ],
 
     # Package structure
-    packages=find_packages('src', exclude=['ez_setup', '*.tests', '*.tests.*', 'tests.*', 'tests']),
-    package_dir={'': 'src'},
+    packages=find_packages('backend', exclude=['ez_setup', '*.tests', '*.tests.*', 'tests.*', 'tests']),
+    package_dir={'': 'backend'},
     include_package_data=True,
     zip_safe=False,
 

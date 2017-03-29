@@ -13,8 +13,8 @@ def main():
     set_logger()
     mongo_connect()
 
-    from nemesis.api import api
-    run(host=options.api_host, port=options.api_port)
+    from nemesis.api import reports, users
+    run(server='tornado', host=options.api_host, port=options.api_port)
 
 
 if __name__ == "__main__":

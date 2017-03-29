@@ -6,7 +6,6 @@ import logging
 from slackclient import SlackClient
 
 from nemesis.bot import bot_messages
-from nemesis.common.config import options
 from nemesis.models.models import UserSlack
 from nemesis.models.models import UserStatusReport
 
@@ -37,8 +36,8 @@ class SlackClientNemesis(object):
 
 class Nemesis(SlackClientNemesis):
 
-    def __init__(self):
-        self.token = options.slack_token_bot_slack
+    def __init__(self, token):
+        self.token = token
         self.slack_client = SlackClient(self.token)
         self.bot_id = self.get_bot_info()
 
